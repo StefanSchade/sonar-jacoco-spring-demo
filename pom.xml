@@ -33,10 +33,12 @@
         <jacoco.version>0.8.6</jacoco.version>
 
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-<!--        <sonar.login>60bd2f01d4cab1966c2563808b06041f58b1bc2d</sonar.login>-->
+        <!--        <sonar.login>60bd2f01d4cab1966c2563808b06041f58b1bc2d</sonar.login>-->
         <sonar.login>f2a35860f3498ede37a73ed194af7006d482845f</sonar.login>
 
-        <sonar.coverage.jacoco.xmlReportPathscoverage-reports>./target/jacoco-unit-integration</sonar.coverage.jacoco.xmlReportPathscoverage-reports>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${project.basedir}/../coverage-reports/target/jacoco-unit-integration/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
 
     </properties>
 
@@ -100,6 +102,7 @@
                 <artifactId>sonar-maven-plugin</artifactId>
             </plugin>
         </plugins>
+
 
     </build>
 
